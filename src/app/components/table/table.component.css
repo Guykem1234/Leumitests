@@ -1,0 +1,14 @@
+table {
+  width: 100%;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+.search-location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}

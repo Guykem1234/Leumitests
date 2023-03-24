@@ -1,0 +1,32 @@
+<div class="container">
+    <mat-form-field appearance="fill">
+        <mat-label>Location</mat-label>
+        <mat-select (selectionChange)="onSelect($event.value)">
+            <mat-option *ngFor="let l of locations" [value]="l">
+                {{l.locationLatLng}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <div class="selection-container" *ngIf="selection && selectionCarOwners">
+        <img [src]="selection.img" alt="not found" style="width:150px">
+        <mat-list>
+            <mat-list-item *ngFor="let carOwner of selectionCarOwners;">
+                <div style="display: grid;grid-template-columns: auto auto auto; gap:10px;">
+                    <div class="content">
+                        <div>Car Number: </div>
+                        <div>{{carOwner.car.carNumber}}</div>
+                    </div>
+                    <div class="content">
+                        <div>Owner: </div>
+                        <div>{{carOwner.owner?.fullName}}</div>
+                    </div>
+                    <div class="content">
+                        <div>Date: </div>
+                        <div>{{selection.dateTime}}</div>
+                    </div>
+                </div>
+            </mat-list-item>
+        </mat-list>
+    </div>
+</div>

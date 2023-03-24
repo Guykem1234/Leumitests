@@ -1,0 +1,52 @@
+<div class="container">
+
+    <div class="content">
+        <div>Name: </div>
+        <div>{{data.fullName}}</div>
+    </div>
+
+    <div class="content">
+        <div>Address: </div>
+        <div>{{data.address}}</div>
+    </div>
+    <div class="content">
+        <div>Phone Number: </div>
+        <div>{{data.phoneNumber}}</div>
+    </div>
+    <div class="content">
+        <div>Birthday: </div>
+        <div>{{data.birthday}}</div>
+    </div>
+
+    <img [src]="data.img" alt="not found" style="width:150px">
+
+    <div>Cars: </div>
+    <mat-list>
+        <mat-list-item *ngFor="let car of cars;" style="height:20px">
+            <div class="content">
+                <div>Car Number: </div>
+                <div>{{car.carNumber}}</div>
+            </div>
+        </mat-list-item>
+    </mat-list>
+
+    <div>Locations: </div>
+    <mat-list>
+        <mat-list-item *ngFor="let l of locations;" style="height:20px">
+            <div style="display: grid;grid-template-columns: auto auto auto;">
+                <div class="content" style="flex-grow: 3;">
+                    <div>Location: </div>
+                    <div>{{l.locationLatLng}}</div>
+                </div>
+                <div class="content" style="flex-grow: 1;">
+                    <div>Date: </div>
+                    <div>{{l.dateTime}}</div>
+                </div>
+                <div class="content" style="flex-grow: 1;">
+                    <div>Car Number: </div>
+                    <div>{{l.carNumber}}</div>
+                </div>
+            </div>
+        </mat-list-item>
+    </mat-list>
+</div>

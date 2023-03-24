@@ -1,0 +1,23 @@
+.container {
+    width: 1000px;
+    height: 700px;
+    padding: 30px;
+    align-items: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.selection-container {
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.content {
+    display: flex;
+    gap: 10px;
+}
